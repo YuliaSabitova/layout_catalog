@@ -88,13 +88,12 @@
 
     background-color: $main-color;
 
-    &[data-qa='card-hover'] {
-      color: #fff;
-      background-color: $main-color;
+    &[data-qa='card-hover']:hover {
+      color: $main-color;
+      background-color: #fff;
 
-      &:hover {
-        color: $main-color;
-        background-color: #fff;
+      @if (lightness($main-color) > 80) {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); 
       }
     }
   }
